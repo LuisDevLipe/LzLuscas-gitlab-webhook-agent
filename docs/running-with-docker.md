@@ -16,7 +16,7 @@ git clone https://github.com/LzLuscas/LzLuscas-gitlab-webhook-agent.git \
     1. No modo de desenvolvimento (com hot reload):
         
         ```bash
-            docker-compose -f docker/docker-compose.yml watch
+            docker-compose -f docker/docker-compose.yml up --watch
         ```
 
     2. No modo de produção:
