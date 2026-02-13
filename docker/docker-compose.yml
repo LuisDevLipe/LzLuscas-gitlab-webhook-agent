@@ -22,6 +22,8 @@ services:
         - path: ../app
           target: /app
           action: sync+restart
+        - path: ../requirements.txt
+          action: rebuild
 
   proxy:
     image: nginxinc/nginx-unprivileged:1.29.5 
@@ -35,7 +37,7 @@ services:
     develop:
       watch:
         - path: ../nginx
-          target: /etc/nginx/conf.d/
+          # target: /etc/nginx/conf.d/
           action: restart
     ulimits:
       nofile:
