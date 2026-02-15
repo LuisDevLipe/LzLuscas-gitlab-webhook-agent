@@ -98,11 +98,7 @@ jobs:
         uses: docker/scout-action@v1
         if: ${{ github.event_name == 'pull_request' }}
         with:
-          command: cves,recommendations,compare
-          to-latest: true
-          ignore-base: true
-          ignore-unchanged: false
-          only-fixed: true
+          command: cves,recommendations
           dockerhub-user: ${{ secrets.DOCKERHUB_USERNAME }}
           dockerhub-password: ${{ secrets.DOCKERHUB_TOKEN }}
 
