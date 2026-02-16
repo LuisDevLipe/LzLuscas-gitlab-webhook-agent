@@ -101,7 +101,7 @@ jobs:
         with:
           image: ${{ steps.meta.outputs.tags }}
           command: quickview,compare,cves,recommendations
-          to: ${{ steps.meta.outputs.tags }}:latest
+          to: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
           dockerhub-user: ${{ secrets.DOCKERHUB_USERNAME }}
           dockerhub-password: ${{ secrets.DOCKERHUB_TOKEN }}
 
