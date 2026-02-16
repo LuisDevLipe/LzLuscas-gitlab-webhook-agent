@@ -83,6 +83,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          load: ${{ github.event_name == 'pull_request' }}
 
         # Run Docker Scout to check for vulnerabilities and get recommendations.
         #     For the latest built image, display:
