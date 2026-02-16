@@ -98,9 +98,9 @@ jobs:
         uses: docker/scout-action@v1
         if: ${{ github.event_name == 'pull_request' }}
         with:
-          command: quickview,compare
-          to-latest: true
-          organization: ${{ github.repository_owner }}
+          command: quickview
+          # to-latest: true
+          # organization: ${{ github.repository_owner }}
           dockerhub-user: ${{ secrets.DOCKERHUB_USERNAME }}
           dockerhub-password: ${{ secrets.DOCKERHUB_TOKEN }}
 
