@@ -98,7 +98,7 @@ jobs:
         uses: docker/scout-action@v1
         if: ${{ github.event_name == 'pull_request' }}
         with:
-          image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          image: ${{ steps.meta.outputs.tags }}
           command: quickview,compare,cves,recommendations
           to-latest: true
           organization: ${{ github.repository_owner }}
