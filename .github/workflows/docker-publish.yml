@@ -104,7 +104,7 @@ jobs:
           to: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
           dockerhub-user: ${{ secrets.DOCKERHUB_USERNAME }}
           dockerhub-password: ${{ secrets.DOCKERHUB_TOKEN }}
-          registry-user: ${{ github.actor }}
+          registry-user: LuisDevLipe
           registry-password: ${{ secrets.GITHUB_TOKEN }}
 
 
