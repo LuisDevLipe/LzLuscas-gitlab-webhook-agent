@@ -100,6 +100,7 @@ jobs:
         with:
           command: quickview,compare
           to-latest: true
+          organization: ${{ github.repository_owner }}
           dockerhub-user: ${{ secrets.DOCKERHUB_USERNAME }}
           dockerhub-password: ${{ secrets.DOCKERHUB_TOKEN }}
 
